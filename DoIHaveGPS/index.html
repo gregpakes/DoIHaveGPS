@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Do I have GPS? || A small utility to take a best guess at whether you have GPS.</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/cosmo/bootstrap.min.css" rel="stylesheet">
+    <link href="styles/styles.min.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <a href="../" class="navbar-brand">Do I have GPS?</a>
+            
+            
+            <ul class="nav navbar-nav navbar-right" style="float:right">
+                <li>
+                    <a href="http://www.gregpakes.co.uk">Blog</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="container" id="mainPage">
+
+        <div class="row mainTitle">
+            <h1 class="text-center">Do I have GPS?</h1>
+        </div>
+
+
+        <div class="row loadingProgress">
+            <div id="progress-container" class="center-block">
+                <h3 id="progress-animated">Please wait...</h3>
+                <div class="progress progress-striped active">
+                    <div class="progress-bar" style="width: 100%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-container" class="row hidden">
+            <div class="col-xs-6">
+                <div id="results-accuracy" class="alert alert-dismissable alert-success">
+                    
+                </div>
+            </div>
+
+            <div class="col-xs-6">
+                <div id="results-coords" class="alert alert-dismissable alert-success ">
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div id="map-canvas" class="center-block"></div>
+
+            <div id="error" class="alert alert-dismissable alert-danger">
+                <span id="error-text">
+                    <strong>Oh snap!</strong> <a href="#" class="alert-link">Change a few things up</a> and try submitting again.
+                </span>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBpfyDdXnHsOtW-t4Gn4EfLEHUD3PBNcMQ&sensor=true"></script>
+    <script src="scripts/gps.min.js"></script>
+    
+    
+    <script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-49716214-1', 'doihavegps.com');
+    ga('send', 'pageview');
+
+    </script>
+</body>
+
+</html>
